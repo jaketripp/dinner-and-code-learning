@@ -157,3 +157,51 @@ Your browser should now look like the following:
 
 ![_config.yml]({{ site.baseurl }}/images/jsfiddle.png)
 
+In the javascript pane, type the following code:
+```language javascript
+function print(message) {
+	var output = document.getElementById('output');
+  output.innerHTML = output.innerHTML + "<br>" + message;
+}
+
+var a = 5;
+
+print(a);
+```
+
+Then press the run button at the top left, and you should see output 
+like the image below:
+
+![_config.yml]({{ site.baseurl }}/images/jsfiddle2.png)
+
+Notice that the output pane on the bottom right now contains the value 
+of the variable _a_ that we set.
+
+```
+var a = 5;
+```
+
+Tells javascript to assign the value of 5 to the variable named _a_. 
+We can now use _a_ later on in the program whenever we need the value 
+again. We can see this when we call _print(a)_ which is a simple 
+function we have defined to display the value of a variable. More about
+this later.
+
+Now if we wanted to add two numbers together, we can simply create a new
+variable _b_, give it a different value, and add them together using
+the + sign. See below:
+
+```language javascript
+function print(message) {
+	var output = document.getElementById('output');
+  output.innerHTML = output.innerHTML + "<br>" + message;
+}
+
+var a = 5;
+
+print(a);
+
+var b = 6;
+
+print(a + b);
+```
