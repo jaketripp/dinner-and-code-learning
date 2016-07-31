@@ -183,8 +183,11 @@ var a = 5;
 Tells javascript to assign the value of 5 to the variable named _a_. 
 We can now use _a_ later on in the program whenever we need the value 
 again. We can see this when we call _print(a)_ which is a simple 
-function we have defined to display the value of a variable. More about
-this later.
+function we have defined to display the value of a variable. Each time 
+we use _print(a)_ or _print(something)_ a new line will be appended to
+the right panel. We'll talk more about functions later. Just keep in 
+mind for now that _print(something)_ is magic that makes a new line
+of text appear in the righthand bottom pane.
 
 Now if we wanted to add two numbers together, we can simply create a new
 variable _b_, give it a different value, and add them together using
@@ -197,11 +200,9 @@ the + sign. See below:
     }
     
     var a = 5;
-    
     print(a);
     
     var b = 6;
-    
     print(a + b);
 
 
@@ -211,6 +212,37 @@ like the image below:
 ![_config.yml]({{ site.baseurl }}/images/jsfiddle3.png)
 
 Note that, in the output pane to the right, we see the initial value of 
-_a_ as 5, and then right below it the value of _a + b_ printed. 5 + 6 is
-11
+_a_ as 5, and then right below it the value of _a + b_ printed. 
+
+5 + 6 is 11, as expected.
+
+We can also store the result of adding the numbers together in another
+variable c. Type the following into jsfiddle:
+
+    function print(message) {
+	    var output = document.getElementById('output');
+        output.innerHTML = output.innerHTML + "<br>" + message;
+    }
+    
+    var a = 5;
+    print(a);
+    
+    var b = 6;
+    print(a + b);
+    
+    var c = a + b;
+    print(c);
+
+Then press the run button at the top left, and you should see output 
+like the image below:
+
+![_config.yml]({{ site.baseurl }}/images/jsfiddle4.png)
+
+As you can see, the output on the right is now
+    
+    5
+    11
+    11
+
+Demonstrating that _c_ holds the result of _a + b_
 
