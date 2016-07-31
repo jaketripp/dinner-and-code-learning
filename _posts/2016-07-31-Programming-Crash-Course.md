@@ -23,13 +23,13 @@ running on a computer.
 Almost all programming languages share a few common features:
 
 - They provide a way to store the value of an intermediate calculation. 
-These storage locations are called variables.
+These storage locations are called **variables**.
 - They provide a way to encapsulate blocks of code into reusable pieces. 
-The most primitive of these is normally in the form of a function.
+The most primitive of these is normally in the form of a **function**.
 - They provide a way to run a block of code N times. This functionality 
 is provided either as a loop construct or a way for a function to call 
 itself the requisite number of times (this is called recursion). We’ll 
-cover for and while loops.
+cover **for and while loops**.
 
 Understanding these basic similarities is essential to writing any 
 computer program. For the remainder of this document, we’ll provide some 
@@ -246,3 +246,25 @@ As you can see, the output on the right is now
 
 Demonstrating that _c_ holds the result of _a + b_
 
+# Functions
+Functions allow you to package up multiple lines of code that you may 
+want to reuse more than once in a project. This allows us to write
+utilities that can be used from all over a program as well as avoiding
+copying and pasting code all over the place that will lead to bugs and
+having to fix the same problems in multiple places.
+
+### Python example
+In python, we define a function with the **def** keyword. Each function 
+has a name, and a set of **parameters** that can be sent to it each time 
+we call it. You can think of a function as telling someone what to do, 
+and then adding some more specific instructions. A request such as 
+"I would like a grilled cheese with tomato" could be represented in 
+Python as a function defined like so:
+
+~~~ python
+def make_grilled_cheese(include_tomato): #include_tomato is a parameter 
+    if include_tomato:
+        #do something special to include tomato
+    else:
+        #make the grilled cheese, but no tomato
+~~~
