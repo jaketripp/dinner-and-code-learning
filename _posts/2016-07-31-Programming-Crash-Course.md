@@ -158,16 +158,15 @@ Your browser should now look like the following:
 ![_config.yml]({{ site.baseurl }}/images/jsfiddle.png)
 
 In the javascript pane, type the following code:
-```language javascript
-function print(message) {
-	var output = document.getElementById('output');
-  output.innerHTML = output.innerHTML + "<br>" + message;
-}
 
-var a = 5;
-
-print(a);
-```
+    function print(message) {
+        var output = document.getElementById('output');
+      output.innerHTML = output.innerHTML + "<br>" + message;
+    }
+    
+    var a = 5;
+    
+    print(a);
 
 Then press the run button at the top left, and you should see output 
 like the image below:
@@ -191,17 +190,27 @@ Now if we wanted to add two numbers together, we can simply create a new
 variable _b_, give it a different value, and add them together using
 the + sign. See below:
 
-```language javascript
-function print(message) {
-	var output = document.getElementById('output');
-  output.innerHTML = output.innerHTML + "<br>" + message;
-}
 
-var a = 5;
+    function print(message) {
+	    var output = document.getElementById('output');
+        output.innerHTML = output.innerHTML + "<br>" + message;
+    }
+    
+    var a = 5;
+    
+    print(a);
+    
+    var b = 6;
+    
+    print(a + b);
 
-print(a);
 
-var b = 6;
+Then press the run button at the top left, and you should see output 
+like the image below:
 
-print(a + b);
-```
+![_config.yml]({{ site.baseurl }}/images/jsfiddle3.png)
+
+Note that, in the output pane to the right, we see the initial value of 
+_a_ as 5, and then right below it the value of _a + b_ printed. 5 + 6 is
+11
+
