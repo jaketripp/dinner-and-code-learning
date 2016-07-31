@@ -145,9 +145,7 @@ We can see that _c_ now has the value 11 from the result of _a + b_
 Navigate to jsfiddle.net
 
 In the HTML pane to the top left, type the following code:
-```language html
-<p id="output"></p>
-```
+&lt;p id="output"&gt;&lt;/p&gt;
 
 We'll use this for the rest of the examples as it provides a place for
 us to see the output of the code that is written.
