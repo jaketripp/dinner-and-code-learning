@@ -79,7 +79,7 @@ for later use. Let’s say for example that you’re writing a program that
 adds two numbers together and do something later with the result. We can 
 use variables to store the result and print it out. 
 
-### Python Example
+### Python Variables Example
 Open up the IDLE editor and type in a = 5 and then press enter. The 
 screen should look something like this below.
 
@@ -141,7 +141,7 @@ Type "copyright", "credits" or "license()" for more information.
 
 We can see that _c_ now has the value 11 from the result of _a + b_
 
-### Javascript Example
+### Javascript Variables Example
 Navigate to jsfiddle.net
 
 In the HTML pane to the top left, type the following code:
@@ -249,11 +249,11 @@ Demonstrating that _c_ holds the result of _a + b_
 # Functions
 Functions allow you to package up multiple lines of code that you may 
 want to reuse more than once in a project. This allows us to write
-utilities that can be used from all over a program as well as avoiding
-copying and pasting code all over the place that will lead to bugs and
-having to fix the same problems in multiple places.
+utilities that can be used from anywhere in a program as well as 
+avoiding copying and pasting code all over the place that will lead to 
+bugs and having to fix the same problems in multiple places.
 
-### Python example
+### Python function example
 In python, we define a function with the **def** keyword. Each function 
 has a name, and a set of **parameters** that can be sent to it each time 
 we call it. You can think of a function as telling someone what to do, 
@@ -268,3 +268,58 @@ def make_grilled_cheese(include_tomato): #include_tomato is a parameter
     else:
         #make the grilled cheese, but no tomato
 ~~~
+
+We can call the make_grilled_cheese function in two different ways.
+The first includes the tomato, and the second omits it:
+
+~~~ python
+make_grilled_cheese(False) #makes a grilled cheese without tomato
+make_grilled_cheese(True) #makes a grilled cheese with tomato
+~~~
+
+When the make_grilled_cheese function is called as above, the value we
+pass in sets the value of the _include_tomato_ parameter inside the
+function, and we can then test if the caller would like tomato or not.
+
+In our previous python examples, _print()_ was a function that we called
+to see the values of our variables. This function is defined by the
+python language, so we didn't actually have to **def** it.
+
+~~~ python
+a = 5
+print(a)
+~~~
+
+In the code above, _a_ is the parameter passed to the print function.
+print(X) takes whatever we pass in for X and prints it to the screen
+
+Lets define our own function and call it. Open IDLE and fill out a 
+function called double_a_number. It should look like the following:
+
+    Python 2.7.10 (default, May 23 2015, 09:40:32) [MSC v.1500 32 bit (Intel)] on win32
+    Type "copyright", "credits" or "license()" for more information.
+    >>> def double_a_number(number):
+        return number * 2
+    
+    >>> 
+
+The function we have defined is called double_a_number, and it takes a
+single number as a parameter. **return** sends a value back to the
+caller, and in this case, the value it sends is whatever the caller
+passed to the _number_ parameter multiplied by 2.
+
+Now that we have a function to call, lets call it and see if it does
+what we expect
+
+    Python 2.7.10 (default, May 23 2015, 09:40:32) [MSC v.1500 32 bit (Intel)] on win32
+    Type "copyright", "credits" or "license()" for more information.
+    >>> def double_a_number(number):
+        return number * 2
+    
+    >>> a = 5
+    >>> result = double_a_number(a)
+    >>> print(result)
+    10
+    >>> 
+
+As in the previous example, we set the value of a to 5 using _a = 5_
