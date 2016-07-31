@@ -146,7 +146,9 @@ Navigate to jsfiddle.net
 
 In the HTML pane to the top left, type the following code:
 ```
-&lt;p id="output"&gt;&lt;/p&gt;
+<pre><code>
+<p id="output"></p>
+</code></pre>
 ```
 
 We'll use this for the rest of the examples as it provides a place for
