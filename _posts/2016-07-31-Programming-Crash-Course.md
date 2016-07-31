@@ -125,3 +125,37 @@ Type "copyright", "credits" or "license()" for more information.
 We can also store the result of adding the numbers together in another 
 variable _c_
 
+```
+Python 3.5.1 (v3.5.1:37a07cee5969, Dec  6 2015, 01:54:25) [MSC v.1900 64 bit (AMD64)] on win32
+Type "copyright", "credits" or "license()" for more information.
+>>> a = 5
+>>> print(a)
+5
+>>> b = 6
+>>> print(a + b)
+11
+>>> c = a + b
+>>> print(c)
+11
+```
+
+We can see that _c_ now has the value 11 from the result of _a + b_
+
+### Javascript Example
+Navigate to jsfiddle.net
+
+In the HTML pane to the top left, type the following code:
+```
+<p id="output"></p>
+```
+
+We'll use this for the rest of the examples as it provides a place for
+us to see the output of the code that is written.
+
+From now on, we'll be concentrating on the javascript pane to the bottom
+left
+
+Your browser should now look like the following:
+
+![_config.yml]({{ site.baseurl }}/images/jsfiddle.png)
+
