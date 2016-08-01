@@ -351,4 +351,11 @@ variable result by typing _result = double_a_number(10)_
 After that we can print out the result of _double_a_number(10)_ by calling the 
 print function on _result_ as shown above in _print(result)_
 
+### Javascript function example
+In javascript, we define a function with the **function** keyword. Each 
+function has a name, and a set of **parameters** that can be sent to it 
+each time we call it. You can think of a function as telling someone 
+what to do, and then adding some more specific instructions. A request 
+such as "I would like a grilled cheese with tomato" could be represented 
+in Javascript as a function defined like so:
 
