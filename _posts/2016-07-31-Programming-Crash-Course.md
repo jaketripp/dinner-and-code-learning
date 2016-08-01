@@ -380,6 +380,12 @@ makeGrilledCheese(false); //makes a grilled cheese without tomato
 makeGrilledCheese(true); //makes a grilled cheese with tomato
 ~~~
 
+When the makeGrilledCheese function is called as above, the value we
+pass in sets the value of the _includeTomato_ parameter inside the
+function, and we can then test if the caller would like tomato or not.
+
+Let's take a look at another function we defined earlier.
+
 Make sure you have jsfiddle open as in the previous example and lets 
 take a look at our starting point print function:
 
@@ -405,6 +411,35 @@ Your jsfiddle should now look like this:
 
 ![_config.yml]({{ site.baseurl }}/images/jsfiddle5.png)
 
-When the make_grilled_cheese function is called as above, the value we
-pass in sets the value of the _include_tomato_ parameter inside the
-function, and we can then test if the caller would like tomato or not.
+Let's look at the function in depth
+
+~~~ javascript
+function doubleTheNumber(number) { // number here is the parameter
+		return number * 2; //return the parameter multiplied by 2
+}
+~~~
+
+We would call the function like so:
+
+~~~ javascript
+var a = 5;
+print(doubleTheNumber(a));
+~~~
+
+Lets add this below the functions in our jsfiddle and then press play 
+to see the result which should now look like this:
+
+![_config.yml]({{ site.baseurl }}/images/jsfiddle6.png)
+
+Note that the output of the function has been printed directly via
+_print(doubleTheNumber(a));_. We can also store the result in a variable
+and then print it out later, like so:
+
+~~~ javascript
+var result = doubleTheNumber(a);
+print(result);
+~~~
+
+Add these lines to the program and you should see the following results:
+
+![_config.yml]({{ site.baseurl }}/images/jsfiddle7.png)
