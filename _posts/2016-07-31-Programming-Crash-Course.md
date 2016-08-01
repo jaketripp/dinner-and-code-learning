@@ -306,7 +306,8 @@ function called double_a_number. It should look like the following:
 The function we have defined is called double_a_number, and it takes a
 single number as a parameter. **return** sends a value back to the
 caller, and in this case, the value it sends is whatever the caller
-passed to the _number_ parameter multiplied by 2.
+passed to the _number_ parameter multiplied by 2 as in the above 
+_return number * 2_
 
 Now that we have a function to call, lets call it and see if it does
 what we expect
@@ -317,9 +318,37 @@ what we expect
         return number * 2
     
     >>> a = 5
-    >>> result = double_a_number(a)
-    >>> print(result)
+    >>> double_a_number(a)
     10
     >>> 
 
-As in the previous example, we set the value of a to 5 using _a = 5_
+As in the previous example, we set the value of _a_ to 5 using _a = 5_
+but now instead of just printing it out, we pass it to our 
+double_a_number function. We then see that _double_a_number(a)_ returns
+10 as expected, since we passed 5 in as the number parameter and it was
+doubled.
+
+We can also store the return value of a function for later use. Just 
+like an assignment of _a = 5_, we do this like so:
+
+    Python 2.7.10 (default, May 23 2015, 09:40:32) [MSC v.1500 32 bit (Intel)] on win32
+    Type "copyright", "credits" or "license()" for more information.
+    >>> def double_a_number(number):
+        return number * 2
+    
+    >>> a = 5
+    >>> double_a_number(a)
+    10
+    >>> b = 10
+    >>> result = double_a_number(10)
+    >>> print(result)
+    20
+    >>> 
+
+Note that we're assigning the result of _double_a_number(10)_ to the
+variable result by typing _result = double_a_number(10)_ 
+
+After that we can print out the result of _double_a_number(10)_ by calling the 
+print function on _result_ as shown above in _print(result)_
+
+
