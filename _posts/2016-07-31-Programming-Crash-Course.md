@@ -161,7 +161,7 @@ In the javascript pane, type the following code:
 
     function print(message) {
         var output = document.getElementById('output');
-      output.innerHTML = output.innerHTML + "<br>" + message;
+        output.innerHTML = output.innerHTML + "<br>" + message;
     }
     
     var a = 5;
@@ -293,6 +293,9 @@ print(a)
 In the code above, _a_ is the parameter passed to the print function.
 print(X) takes whatever we pass in for X and prints it to the screen
 
+Functions can also return values to be used later. We use the 
+**return** keyword to accomplish this.
+
 Lets define our own function and call it. Open IDLE and fill out a 
 function called double_a_number. It should look like the following:
 
@@ -359,3 +362,49 @@ what to do, and then adding some more specific instructions. A request
 such as "I would like a grilled cheese with tomato" could be represented 
 in Javascript as a function defined like so:
 
+~~~ javascript
+function makeGrilledCheese(includeTomato) {
+    if (includeTomato) {
+        //do something special to include tomato
+    } else {
+        //make the grilled cheese, but no tomato
+    }
+}
+~~~
+
+We can call the makeGrilledCheese function in two different ways.
+The first includes the tomato, and the second omits it:
+
+~~~ javascript
+makeGrilledCheese(false); //makes a grilled cheese without tomato
+makeGrilledCheese(true); //makes a grilled cheese with tomato
+~~~
+
+Make sure you have jsfiddle open as in the previous example and lets 
+take a look at our starting point print function:
+
+    function print(message) {
+        var output = document.getElementById('output');
+        output.innerHTML = output.innerHTML + "<br>" + message;
+    }
+
+Here, we are interacting with the web browser in order to print messages 
+The name of the function is _print_, and it takes a single parameter
+called _message_. We then find the output p tag we added to the HTML in
+the top left window, and add the content contained in the _message_
+parameter to it.
+
+Functions can also return values to be used later. We use the 
+**return** keyword to accomplish this.
+
+Lets define our own function and call it. Add a new function below
+the _print_ function called _doubleTheNumber_. It should take a 
+parameter called _number_, and **return** that number multiplied by 2. 
+
+Your jsfiddle should now look like this:
+
+![_config.yml]({{ site.baseurl }}/images/jsfiddle5.png)
+
+When the make_grilled_cheese function is called as above, the value we
+pass in sets the value of the _include_tomato_ parameter inside the
+function, and we can then test if the caller would like tomato or not.
