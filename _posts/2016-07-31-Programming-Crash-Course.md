@@ -3,20 +3,20 @@ layout: post
 title: Programming crash course
 ---
 
-Coding is super fun, and can be very rewarding, but in order to be able 
-to complete any projects, we first have to have a basic understanding of 
+Coding is super fun and can be very rewarding, but in order to be able 
+to complete any projects, you must first have a basic understanding of 
 programing constructs.
 
 Programming languages are designed as a bridge for humans to be able to 
-give computer a series of instructions to follow to complete a task. 
-They have evolved from punch cards, to machine language, to systems 
-programming languages, and finally high level object oriented and 
-functional programming languages. Language evolution is driven by our 
-desire to get more done in less time and with less effort.
+give computer a series of instructions to follow in order to complete a 
+task.  They have evolved from punch cards, to machine language, to 
+systems programming languages, and finally high level object oriented 
+and functional programming languages. Language evolution is driven by
+our desire to get more done in less time and with less effort.
 
-Ultimately, whatever language we choose to code in, the most important 
-part is how easily we can get our idea from the inside of our heads to 
-running on a computer.
+Ultimately, whatever language you choose to code in, the most important 
+aspect is how easily you can get an idea from inside your head to running 
+on a computer.
 
 # Language Similarities
 
@@ -30,53 +30,54 @@ The most primitive of these is normally in the form of a **function**.
 is provided either as a loop construct or a way for a function to call 
 itself the requisite number of times (this is called recursion). We’ll 
 cover **for and while loops**.
+- Further, most programming languages provide a way to evaluate the 
+conditions under which a block of code is run. This is called a 
+conditional construct. 
 
 Understanding these basic similarities is essential to writing any 
 computer program. For the remainder of this document, we’ll provide some 
-examples of how these features are used to build a functional computer 
+examples of how these features are used to build a functioning computer 
 program.
 
 # Getting started
 
 At dinner and code, we concentrate on two languages to start off new 
-programmers with. Python, and/or javascript.
+programmers with: Python, and/or javascript.
 
 ### Python
 A modern, interactive, object oriented programming language. Its clear 
 syntax and extensive libraries make it a great choice for beginners that 
-want to learn to code without having to write absolutely everything 
-themselves.
+want to learn to write code without having to write absolutely everything 
+on their own.
 
 ### Javascript
 A prototype based programming language. Javascript has quickly become a 
-requirement for any serious front end web development work. Its ubiquity 
-makes it a great language to learn to accomplish a large variety of 
-projects.
+requirement for any serious front end web development. Its ubiquity 
+makes it a great language to learn to accomplish a variety of projects.
 
-No matter which of these languages you choose to begin learning about, 
-we’ll provide examples in this guide to explain the basic concepts.
+No matter which language you choose to begin learning about, examples 
+are provided in this guide to help explain the basic concepts.
 
 ### Getting started in Python
 
-You’ll need to download the python programming language from the 
-internet to get started in python programming. To do this, head over to 
-https://www.python.org/downloads/ and choose the latest version of 
-Python 3.0 that is available on the page. Make sure you download the 
-version for your operating system. Once python is installed, you can 
-click on the IDLE editor that comes with the package and start typing 
-in code right away.
+You’ll need to download the python programming language to get started. 
+To do this, head over to https://www.python.org/downloads/ and choose 
+the latest version of Python 3.0 that is available on the page. Make 
+sure you download the correct version for your operating system. Once 
+python is installed, you can click on the IDLE editor that comes with 
+the package and start typing in code right away.
 
 ### Getting started in Javascript
 The easiest way to get started in Javascript is simply to navigate to 
-jsfiddle.net where you’ll be able to type in HTML, JS, and CSS and see 
-the results of what you’re doing right away.
+jsfiddle.net where you can to type in HTML, JS, and CSS and see 
+the results immediately.
 
 ---
 
 # Variables
-Variables allow you to save the result of some work that has been done 
-for later use. Let’s say for example that you’re writing a program that 
-adds two numbers together and do something later with the result. We can 
+Variables allow you to store the result of some work that has been done 
+for later use. Let’s say, for example, you’re writing a program that adds 
+two numbers together and does something later on with the result. We can 
 use variables to store the result and print it out. 
 
 ### Python Variables Example
@@ -104,9 +105,9 @@ Type "copyright", "credits" or "license()" for more information.
 >>>
 ```
 
-Note that using _print(a)_ has printed the value of 5 to us. So now if 
+Note that using _print(a)_ has printed the value of 5. So now if 
 we wanted to add two numbers together, we can simply create a new 
-variable _b_, give it a different value, and add them together using 
+variable _b_, give it a different value and add them together using 
 the + sign. See below:
 
 ```
@@ -249,11 +250,11 @@ Demonstrating that _c_ holds the result of _a + b_
 ---
 
 # Functions
-Functions allow you to package up multiple lines of code that you may 
-want to reuse more than once in a project. This allows us to write
-utilities that can be used from anywhere in a program as well as 
-avoiding copying and pasting code all over the place that will lead to 
-bugs and having to fix the same problems in multiple places.
+Functions allow you to package up multiple commands that you may 
+want to reuse more than once in a project. This allows you to write
+utilities that can be used anywhere in a program as well as avoiding 
+copying and pasting duplicate code all over which leads to bugs 
+and having to fix the same problems in multiple places.
 
 ### Python function example
 In python, we define a function with the **def** keyword. Each function 
@@ -666,3 +667,66 @@ number++) { //shorthand for number = number + 1
 
 Note that the two loops have the exact same output, but the bottom one
 is less lines, and less prone to mistakes
+
+# Conditionals
+Programming gets really interesting when you can test conditions and change
+the program's behavior depending on the outcome of the tests. Conditionals 
+allow you to do this. You have already seen conditionals at work earlier in 
+the make_grilled_cheese(include_tomato) function. Let's take a look more in 
+depth:
+
+## Boolean expressions
+
+A boolean expression is one that evaluates to produce a result which is of
+a boolean type (that is, either true or false.) Boolean expressions are the 
+basis for all modern computer logic. For example, in python, the operator ==
+tests that two variables or values are equal. It produces (or yields) a 
+boolean value:
+
+~~~ python
+>>> 3 == (1 + 2)
+True
+>>> 3 == 4
+False
+>>> j = "cod"
+>>> j == "code"
+False
+>>> j + "e" == "code"
+True
+~~~
+
+## Conditional execution
+In order to code useful and interesting programs, we almost always need the
+ability to evaluate conditions and change the program behavior accordingly.
+The simplest form is the if statement:
+
+~~~ python
+if x % 2 == 0:
+    print(x, " is even.")
+    print("Did you know that two is the only even number that is also prime?")
+else:
+    print(x, "is odd.")
+    print("Did you know that multiplying two odd numbers always yields " +
+        "an odd result?")
+~~~
+
+The boolean expression after an if statement is called a condition. If true, 
+then all indented statements get executed. If false, then all the statements
+indented under the else clause get executed. An else clause is optional. You
+may write conditionals that only evaluate whether a condition is true and do 
+nothing when false.
+
+## Chained conditionals
+Sometimes there are more than two possibilities and we need more than two 
+paths the code may take. One way to express this is with a chained conditional.
+An example:
+
+~~~ python
+if x < y:
+    print(x, " is less than ", y)
+elif x > y:
+    print(x, " is greater than ", y)
+else:
+    print("If ", x, " is neither greater nor lesser than ", y,
+       " it must be equal to it.")
+~~~
