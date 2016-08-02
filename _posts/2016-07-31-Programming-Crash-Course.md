@@ -14,9 +14,9 @@ systems programming languages, and finally high level object oriented
 and functional programming languages. Language evolution is driven by
 our desire to get more done in less time and with less effort.
 
-Ultimately, whatever language you choose to code in, the most important 
-aspect is how easily you can get an idea from inside your head to running 
-on a computer.
+Ultimately, no matter which language you choose to code in, the
+objective is to translate an idea inside your head into a program running 
+on a computer. 
 
 # Language Similarities
 
