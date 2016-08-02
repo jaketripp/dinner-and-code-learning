@@ -556,7 +556,10 @@ Note that the two loops have the exact same output, but the bottom one
 is less code. The _range_ function returns numbers between the two 
 parameters given, up to but not including the second number.
 
+_range(start, end)_
+
 This means:
+
 ~~~ python
 for number in range(1, 6): #first parameter is the start so 1 is included
     print(number) #prints the numbers 1 through 5. 6 is excluded
@@ -565,3 +568,101 @@ for number in range(3, 9): #first parameter is the start so 3 is included
     print(number) #prints the numbers 3 through 8. 9 is excluded
 ~~~
 
+### Javascript looping examples
+Let's say we want to print out numbers from 1 - 10 in Javascript. There 
+are actually a few ways to do this. Let's explore a couple. We'll start
+off with our print function and add to it.
+
+    function print(message) {
+        var output = document.getElementById('output');
+        output.innerHTML = output.innerHTML + "<br>" + message;
+    }
+    
+    var number = 0;
+    while (number < 5) {
+        number = number + 1;
+        print(number);
+    }
+
+Typing that into the javascript panel of our jsfiddle and pressing the
+Run button will yield the following:
+
+![_config.yml]({{ site.baseurl }}/images/jsfiddle8.png)
+
+Note that javascript listed all numbers between 1 and 5 and then brought us
+back to the prompt. Lets take a closer look:
+
+~~~ javascript
+while (number < 5) {
+    
+}
+~~~
+
+This tells javascript that everything contained between the curly 
+brackets of this statement will be repeated over and over again in top 
+down order while the _number_ variable is less than 5.
+
+~~~ javascript
+number = number + 1;
+~~~
+
+This takes whatever the current value of the _number_ variable is,
+adds 1 to it, and then assigns the new value back to _number_ creating
+a counter.
+
+~~~ javascript
+print(number);
+~~~
+
+We've done this before. Prints out the number to the screen.
+
+If you imagine this running over and over again in your head:
+
+~~~ javascript
+number = number + 1;
+print(number);
+~~~
+
+You can start to understand why we have to put limits on the while loop.
+_number < 5_ makes it so that we don't continue the loop forever (a 
+bug known as an infinite loop). We can intentionally create a loop that
+goes on forever by replacing _while number < 5_ with _while true_, but 
+I don't recommend this as you'll have to force kill the browser or script
+to be able to work again.
+
+An even easier way to count in Javascript is the **for** loop:
+
+        function print(message) {
+            var output = document.getElementById('output');
+            output.innerHTML = output.innerHTML + "<br>" + message;
+        }
+        
+        var number = 0;
+        while (number < 5) {
+            number = number + 1;
+            print(number);
+        }
+            
+        for (number = 1; number < 6; number++) {
+            print(number);
+        }
+
+Typing that into the javascript panel of our jsfiddle and pressing the
+Run button will yield the following:
+
+![_config.yml]({{ site.baseurl }}/images/jsfiddle9.png)
+
+_for (number = 1; number < 6; number++) {_
+
+This means:
+
+~~~ javascript   
+for (number = 1; //start our counter variable, number at 1
+number < 6; //continue while number is less than 6 
+number++) { //shorthand for number = number + 1
+    
+}
+~~~
+
+Note that the two loops have the exact same output, but the bottom one
+is less lines, and less prone to mistakes
