@@ -246,6 +246,8 @@ As you can see, the output on the right is now
 
 Demonstrating that _c_ holds the result of _a + b_
 
+---
+
 # Functions
 Functions allow you to package up multiple lines of code that you may 
 want to reuse more than once in a project. This allows us to write
@@ -443,3 +445,123 @@ print(result);
 Add these lines to the program and you should see the following results:
 
 ![_config.yml]({{ site.baseurl }}/images/jsfiddle7.png)
+
+---
+
+# Loops
+Loops give us a way to perform some task more than once. This task 
+can be anything from counting from 1 to 10 to iterating all the 
+elements in a list.
+
+### Python looping examples
+Let's say we want to print out numbers from 1 - 10 in python. There are
+actually a few ways to do this. Let's explore a couple:
+
+Open up IDLE and type in the following code:
+
+    Python 2.7.10 (default, May 23 2015, 09:40:32) [MSC v.1500 32 bit (Intel)] on win32
+    Type "copyright", "credits" or "license()" for more information.
+    >>> number = 0
+    >>> while number < 5:
+    	number = number + 1
+    	print(number)
+
+When you press enter after the last line, you should see the following 
+appear:
+
+    Python 2.7.10 (default, May 23 2015, 09:40:32) [MSC v.1500 32 bit (Intel)] on win32
+    Type "copyright", "credits" or "license()" for more information.
+    >>> number = 0
+    >>> while number < 5:
+            number = number + 1
+            print(number)
+    
+        
+    1
+    2
+    3
+    4
+    5
+    >>> 
+
+Note that python listed all numbers between 1 and 5 and then brought us
+back to the prompt. Lets take a closer look:
+
+~~~ python
+while number < 5:
+~~~
+
+This tells python that everything indented underneath this statement
+will be repeated over and over again in top down order while the 
+_number_ variable is less than 5.
+
+~~~ python
+number = number + 1
+~~~
+
+This takes whatever the current value of the _number_ variable is,
+adds 1 to it, and then assigns the new value back to _number_ creating
+a counter.
+
+~~~ python
+print(number)
+~~~
+
+We've done this before. Prints out the number to the screen.
+
+If you imagine this running over and over again in your head:
+
+~~~ python
+number = number + 1
+print(number)
+~~~
+
+You can start to understand why we have to put limits on the while loop.
+_number < 5_ makes it so that we don't continue the loop forever (a 
+bug known as an infinite loop). We can intentionally create a loop that
+goes on forever by replacing _while number < 5_ with _while True_, but 
+I dont recommend this as you'll have to force kill IDLE to be able to
+work again.
+
+In python we can also use a builtin function called _range_ to more easily 
+create loops that iterate through a range of numbers.
+
+Below is an easier way to do what we did above:
+
+    Python 2.7.10 (default, May 23 2015, 09:40:32) [MSC v.1500 32 bit (Intel)] on win32
+    Type "copyright", "credits" or "license()" for more information.
+    >>> number = 0
+    >>> while number < 5:
+    	number = number + 1
+    	print(number)
+    
+    	
+    1
+    2
+    3
+    4
+    5
+    >>> for number in range(1, 6):
+    	print(number)
+    
+    	
+    1
+    2
+    3
+    4
+    5
+    >>> 
+    
+Note that the two loops have the exact same output, but the bottom one
+is less code. The _range_ function returns numbers between the two 
+parameters given, up to but not including the second number.
+
+This means:
+~~~ python
+for number in range(1, 6): #first parameter is the start so 1 is included
+    print(number) #prints the numbers 1 through 5. 6 is excluded
+    
+for number in range(3, 9): #first parameter is the start so 3 is included
+    print(number) #prints the numbers 3 through 8. 9 is excluded
+~~~
+
