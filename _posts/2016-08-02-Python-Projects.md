@@ -17,7 +17,8 @@ on their own.</em>
 <li>Project 3: Hangman</li>
 </ol>
 
-_All of the projects are listed on this page. Keep scrolling to see more._
+<em>All of the projects are listed on this page. Keep scrolling to see more.</em>
+
 ---
 
 
