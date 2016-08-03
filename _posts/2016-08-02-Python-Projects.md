@@ -16,6 +16,8 @@ on their own.</em>
 <li>Project 2: Mad Libs Generator</li>
 <li>Project 3: Hangman</li>
 </ol>
+
+_All of the projects are listed on this page. Keep scrolling to see more._
 ---
 
 
@@ -86,21 +88,16 @@ line. Make sure you save it in the right place so Python can call it up.
 
 ### Step 3: Start writing some code
 
-This program has several components:
+This program has several components you must include:
 
-1.    Call the Random Module
+<ul>
+<li>Call the Random Module</li>
+<li>Define a function to Roll the dice</li>
+<li>Define a main() function of the program</li>
+<li>Print the results</li>
 
-2.    Define a function to Roll the dice
-
-3.    Define a main() function of the
-program
-
-4.    Print the results
-
-
-Code
-Example:
-
+### Code Example:
+```
 import
 random
 
@@ -145,13 +142,11 @@ num_rolled)
 
     main()
 
- 
-
-**
+```
 
 ### Step 4: Run the program
 
 In your command line, go ahead and run the program. If you need help, see: [http://learnpythonthehardway.org/book/ex1.html](http://learnpythonthehardway.org/book/ex1.html)
 
 ---
-#Project 2:  
+# Project 2:  
