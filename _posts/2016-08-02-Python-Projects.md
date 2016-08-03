@@ -96,6 +96,7 @@ This program has several components you must include:
 <li>Define a function to Roll the dice</li>
 <li>Define a main() function of the program</li>
 <li>Print the results</li>
+</ul>
 
 ### Code Example:
 
@@ -223,21 +224,24 @@ Difficulty Level: Intermediate
 
 Language: Python (v3)
 
-##Concepts Learned:
-•	Using a text editor and console
-•	Importing a module
-•	Creating a WHILE loop
-•	Working with Integers
-•	Print
-•	Random
-•	Variables
-•	Boolean
-•	Input/Output
-•	Char
-•	Strings
-•	Length
+## Concepts Learned:
+<ul>
+<li>Using a text editor and console</li>
+<li>Importing a module</li>
+<li>Creating a WHILE loop</li>
+<li>Working with Integers</li>
+<li>Print</li>
+<li>Random</li>
+<li>Variables</li>
+<li>Boolean</li>
+<li>Input/Output</li>
+<li>Char</li>
+<li>Strings</li>
+<li>Length</li>
+</ul>
 
-Description:
+## Description:
+
 The main goal here is to create a “guess the word” game. The user needs to be able to input letter guesses (strings). A limit should also be set on how many guesses they can use. This means you’ll need a way to grab a word to use for guessing. (This can be grabbed from a pre-made list. No need to get too fancy.) You will also need functions to check if the user has actually inputted a single letter, to check if the inputted letter is in the hidden word (and if it is, how many times it appears), to print letters, and a counter variable to limit guesses.
 
 
