@@ -176,14 +176,14 @@ This basic dice rolling program will let you get comfortable with coding in Pyth
 
 [How-To Video for this Project](https://youtu.be/Oq75BBqd2y0)
 
-
 ### Step 3: Start writing some code
 This project is creative, so much of the code is up to you! The components required to make it work include:
-•	Print function
-•	Main function
-•	Variables
-•	Strings
-
+<ul>
+</li>Print function</li>
+<li>Main function</li>	
+<li>Variables</li>	
+<li>Strings</li>
+</ul>
 
 #### Code Example:
 See: http://anh.cs.luc.edu/python/hands-on/3.1/handsonHtml/madlib2.html
