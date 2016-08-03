@@ -179,7 +179,7 @@ This basic dice rolling program will let you get comfortable with coding in Pyth
 ### Step 3: Start writing some code
 This project is creative, so much of the code is up to you! The components required to make it work include:
 <ul>
-</li>Print function</li>
+<li>Print function</li>
 <li>Main function</li>	
 <li>Variables</li>	
 <li>Strings</li>
@@ -187,6 +187,7 @@ This project is creative, so much of the code is up to you! The components requi
 
 #### Code Example:
 See: http://anh.cs.luc.edu/python/hands-on/3.1/handsonHtml/madlib2.html
+
 ```
 print("Welcome to Mad Libs - Python Edition. Follow the prompts to create your own hilarious story.")
 
