@@ -37,17 +37,18 @@ This basic dice rolling program will let you get comfortable with coding in Pyth
 program will randomly select a number (based on the number of “sides” your die
 has) and print it out on the screen. 
 
-## What you’ll need:**
+## What you’ll need:
+
 ###Text editor such as:
 
-1. NotePad++  ([https://notepad-plus-plus.org](https://notepad-plus-plus.org/))
+1. NotePad++ ([https://notepad-plus-plus.org](https://notepad-plus-plus.org/))
 
 2. Brackets ([http://brackets.io/](http://brackets.io/)) 
 
 3. TextWrangler ([http://www.barebones.com/products/textwrangler/](http://www.barebones.com/products/textwrangler/)) 
 
-###Python:
-[Python](http://python.org/download)
+###Python Download:
+[Python Download Page](http://python.org/download)
 
 ###Learning Resources for this Lesson:
 <ul>
@@ -59,13 +60,14 @@ Module [https://en.wikibooks.org/wiki/Choose_Your_Own_Pyventure/Random_and_PRNGs
 2.7) [http://learnpythonthehardway.org/](http://learnpythonthehardway.org/)</li>
 <li>Zed Shaw’s Command Line Crash Course [http://learnpythonthehardway.org/book/appendixa.html](http://learnpythonthehardway.org/book/appendixa.html)</li>
 <li>Python 2.7 Docs [https://docs.python.org/2.7/](https://docs.python.org/2.7/)</li>
+</ul>
 
-### The How-To Video for this Project
+###The How-To Video for this Project
 [YouTube](https://youtu.be/48n9NnK4k-M)
 
 
 ##The Steps
-### Step 1: Get Set Up
+###Step 1: Get Set Up
 You’ll need to install a text editor and configure it for your particular machine. Since
 the steps vary, it’s best to do some Google Fu as it relates to your particular
 text editor + OS combination. 
@@ -77,13 +79,12 @@ You’ll then need to install Python 2.7:
 [http://python.org/download](http://python.org/download)
 
 
-### Step 2: Create a file in your Text editor**
+###Step 2: Create a file in your Text editor
 
 Go ahead and create a .py file in your editor. This file is what you’ll call in your command
 line. Make sure you save it in the right place so Python can call it up.
 
-### Step
-3: Start writing some code**
+###Step 3: Start writing some code
 
 This program has several components:
 
@@ -96,12 +97,9 @@ program
 
 4.    Print the results
 
- 
-
-**
 
 Code
-Example:**
+Example:
 
 import
 random
@@ -151,8 +149,7 @@ num_rolled)
 
 **
 
-Step
-4: Run the program**
+###Step 4: Run the program
 
 In your
 command line, go ahead and run the program. If you need help, see: [http://learnpythonthehardway.org/book/ex1.html](http://learnpythonthehardway.org/book/ex1.html)
