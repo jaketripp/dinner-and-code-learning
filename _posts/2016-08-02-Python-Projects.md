@@ -152,4 +152,207 @@ In your command line, go ahead and run the program. If you need help, see: [http
 
 ---
 
-# Project 2:  
+# Project 2:  Mad Libs Generator
+
+Difficulty Level: Beginner
+
+Language: Python (v3)
+
+## Concepts Learned:
+<ul>
+<li>Using a text editor and console</li>
+<li>Importing a module</li>
+<li>Creating a WHILE loop</li>
+<li>Working with Integers</li>
+<li>Print</li>
+</ul>
+
+## Description:
+This basic dice rolling program will let you get comfortable with coding in Python. The program will randomly select a number (based on the number of “sides” your die has) and print it out on the screen. 
+
+
+## Learning Resources:
+<em>See lesson 1's resources</em>
+
+[How-To Video for this Project](https://youtu.be/Oq75BBqd2y0)
+
+
+### Step 3: Start writing some code
+This project is creative, so much of the code is up to you! The components required to make it work include:
+•	Print function
+•	Main function
+•	Variables
+•	Strings
+
+
+#### Code Example:
+See: http://anh.cs.luc.edu/python/hands-on/3.1/handsonHtml/madlib2.html
+```
+print("Welcome to Mad Libs - Python Edition. Follow the prompts to create your own hilarious story.")
+
+proper_name1 = raw_input("Enter a name: ")
+proper_name2 = raw_input("Enter another name: ")
+noun1 = raw_input("Enter a proper title: ")
+place1 = raw_input("Enter a place: ")
+place2 = raw_input("Enter another place: ")
+verb1 = raw_input("Enter a present-tense verb: ")
+noun3 = raw_input("Enter a noun: ")
+noun2 = raw_input("Enter a plural noun: ")
+noun4 = raw_input("Enter another plural noun: ")
+num2 = raw_input("Enter a number: ")
+num1 = raw_input("Enter another number: ")
+percent1 = raw_input("Enter another number: ")
+
+print("Dear {}, It is my pleasure to {} to you today. I am {} and I'm the "
+     "{} of {}. I have inherited {} {} but I need your help to get it to {}."
+     "Please send me your {} and the sum of {} {} to get started, and I will"
+      " give you {} percent of my inheritance. Yours truly, {}".format(
+          proper_name1, verb1, proper_name2, noun1, place1, num1, noun2, 
+          place2, noun3, num2, noun4, percent1, proper_name2))
+```
+
+## Step 4: Run the program
+In your command line, go ahead and run the program. If you need help, see: http://learnpythonthehardway.org/book/ex1.html
+
+---
+
+# Project 3: Hangman
+
+Difficulty Level: Intermediate
+
+Language: Python (v3)
+
+##Concepts Learned:
+•	Using a text editor and console
+•	Importing a module
+•	Creating a WHILE loop
+•	Working with Integers
+•	Print
+•	Random
+•	Variables
+•	Boolean
+•	Input/Output
+•	Char
+•	Strings
+•	Length
+
+Description:
+The main goal here is to create a “guess the word” game. The user needs to be able to input letter guesses (strings). A limit should also be set on how many guesses they can use. This means you’ll need a way to grab a word to use for guessing. (This can be grabbed from a pre-made list. No need to get too fancy.) You will also need functions to check if the user has actually inputted a single letter, to check if the inputted letter is in the hidden word (and if it is, how many times it appears), to print letters, and a counter variable to limit guesses.
+
+
+## Learning Resources:
+
+[How-To Video for this Project](https://youtu.be/5aAkDVXxNhk)
+
+### Step 3: Start writing some code
+This project is creative, so much of the code is up to you! The components required to make it work include:
+•	Print function
+•	Main function
+•	Print
+•	Random
+•	Variables
+•	Boolean
+•	Input/Output
+•	Char
+•	Strings
+•	Length
+
+#### Code Example:
+<em>Here’s one with a timer from http://www.pythonforbeginners.com/code-snippets-source-code/game-hangman:</em>
+```
+#importing the time module
+import time
+
+#welcoming the user
+name = raw_input("What is your name? ")
+
+print "Hello, " + name, "Time to play hangman!"
+
+print "
+"
+
+#wait for 1 second
+time.sleep(1)
+
+print "Start guessing..."
+time.sleep(0.5)
+
+#here we set the secret
+word = "secret"
+
+#creates an variable with an empty value
+guesses = ''
+
+#determine the number of turns
+turns = 10
+
+# Create a while loop
+
+#check if the turns are more than zero
+while turns > 0:         
+
+    # make a counter that starts with zero
+    failed = 0             
+
+    # for every character in secret_word    
+    for char in word:      
+
+    # see if the character is in the players guess
+        if char in guesses:    
+    
+        # print then out the character
+            print char,    
+
+        else:
+    
+        # if not found, print a dash
+            print "_",     
+       
+        # and increase the failed counter with one
+            failed += 1    
+
+    # if failed is equal to zero
+
+    # print You Won
+    if failed == 0:        
+        print "
+You won"  
+
+    # exit the script
+        break              
+
+    print
+
+    # ask the user go guess a character
+    guess = raw_input("guess a character:") 
+
+    # set the players guess to guesses
+    guesses += guess                    
+
+    # if the guess is not found in the secret word
+    if guess not in word:  
+ 
+     # turns counter decreases with 1 (now 9)
+        turns -= 1        
+ 
+    # print wrong
+        print "Wrong
+"    
+ 
+    # how many turns are left
+        print "You have", + turns, 'more guesses' 
+ 
+    # if the turns are equal to zero
+        if turns == 0:           
+    
+        # print "You Loose"
+            print "You Loose
+"
+
+
+```
+### Step 4: Run the program
+
+In your command line, go ahead and run the program. If you need help, see: [Learn Python the Hard Way Lesson](http://learnpythonthehardway.org/book/ex1.html)
+
+
