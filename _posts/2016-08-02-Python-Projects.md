@@ -68,6 +68,7 @@ Module [https://en.wikibooks.org/wiki/Choose_Your_Own_Pyventure/Random_and_PRNGs
 
 
 ## The Steps
+
 ### Step 1: Get Set Up
 You’ll need to install a text editor and configure it for your particular machine. Since
 the steps vary, it’s best to do some Google Fu as it relates to your particular
@@ -76,9 +77,7 @@ text editor + OS combination.
 See: [http://learnpythonthehardway.org/book/ex0.html](http://learnpythonthehardway.org/book/ex0.html)
 
 You’ll then need to install Python 2.7:
-
 [http://python.org/download](http://python.org/download)
-
 
 ### Step 2: Create a file in your Text editor
 
@@ -155,4 +154,4 @@ num_rolled)
 In your command line, go ahead and run the program. If you need help, see: [http://learnpythonthehardway.org/book/ex1.html](http://learnpythonthehardway.org/book/ex1.html)
 
 ---
-# Lesson 2: 
+#Project 2:  
