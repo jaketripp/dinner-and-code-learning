@@ -10,7 +10,7 @@ syntax and extensive libraries make it a great choice for beginners that
 want to learn to write code without having to write absolutely everything 
 on their own.</em>
 
-# Project Listing
+# Project Listing 
 <ol>
 <li>Project 1: Dice Rolling Game</li>
 <li>Project 2: Mad Libs Generator</li>
@@ -59,10 +59,10 @@ has) and print it out on the screen.
 <li>How to Use the Random Module in
 Python[http://www.pythonforbeginners.com/random/how-to-use-the-random-module-in-python](http://www.pythonforbeginners.com/random/how-to-use-the-random-module-in-python)</li>
 <li>Choose Your on PyVenture: The Random
-Module [https://en.wikibooks.org/wiki/Choose_Your_Own_Pyventure/Random_and_PRNGs](https://en.wikibooks.org/wiki/Choose_Your_Own_Pyventure/Random_and_PRNGs)</li>
+Module [The Random Module](https://en.wikibooks.org/wiki/Choose_Your_Own_Pyventure/Random_and_PRNGs)</li>
 <li>Learn Python the Hard Way (Python
-2.7) [http://learnpythonthehardway.org/](http://learnpythonthehardway.org/)</li>
-<li>Zed Shaw’s Command Line Crash Course [http://learnpythonthehardway.org/book/appendixa.html](http://learnpythonthehardway.org/book/appendixa.html)</li>
+2.7) [Learn Python the Hard Way](http://learnpythonthehardway.org/)</li>
+<li>Zed Shaw’s Command Line Crash Course [Zed Shaw's Command Line Crash Course](http://learnpythonthehardway.org/book/appendixa.html)</li>
 <li>Python 2.7 Docs [https://docs.python.org/2.7/](https://docs.python.org/2.7/)</li>
 </ul>
 
@@ -77,10 +77,10 @@ You’ll need to install a text editor and configure it for your particular mach
 the steps vary, it’s best to do some Google Fu as it relates to your particular
 text editor + OS combination. 
 
-See: [http://learnpythonthehardway.org/book/ex0.html](http://learnpythonthehardway.org/book/ex0.html)
+See: [Learn Python the Hard Way Lesson](http://learnpythonthehardway.org/book/ex0.html)
 
 You’ll then need to install Python 2.7:
-[http://python.org/download](http://python.org/download)
+[Python.org Download](http://python.org/download)
 
 ### Step 2: Create a file in your Text editor
 
@@ -98,6 +98,7 @@ This program has several components you must include:
 <li>Print the results</li>
 
 ### Code Example:
+
 ```
 import
 random
@@ -150,4 +151,5 @@ num_rolled)
 In your command line, go ahead and run the program. If you need help, see: [http://learnpythonthehardway.org/book/ex1.html](http://learnpythonthehardway.org/book/ex1.html)
 
 ---
+
 # Project 2:  
