@@ -10,6 +10,7 @@ The life of a programmer is one of constant learning. Here are some resources th
 <li><a href="http://learnpythonthehardway.org/book/appendixa.html">Zed Shaw’s Command Line Crash Course</a></li>
 <li><a href="https://www.codecademy.com">CodeCademy</a></li>
 <li><a href="http://dinnerandcode.com">Dinner and Code</a></li>
+<li><a href="https://bento.io">Bento</a></li>
 </ul>
 
 ## Learn Version Control
@@ -17,7 +18,6 @@ The life of a programmer is one of constant learning. Here are some resources th
 <li><a href="https://betterexplained.com/articles/a-visual-guide-to-version-control/">A Visual Guide to Version Control</a></li>
 <li><a href="http://guides.beanstalkapp.com/version-control/intro-to-version-control.html">An Introduction to Version Control</a></li>
 <li><a href="http://thedailywtf.com/articles/Source-Control-Done-Right">Source Control Done Right</a></li>
-<li><a href="https://bento.io">Bento</a></li>
 <li><a href="https://www.meetup.com/Dinner-and-Code-San-Antonio/">Dinner and Code Meetup Group</a></li>
 </ul>
 
