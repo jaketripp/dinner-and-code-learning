@@ -5,17 +5,18 @@ title: Python Projects
 
 Dinner and Code currently offers two programming paths: Python and web development. On this page are the Python projects.
 
-Python is a modern, interactive, object oriented programming language. Its clear 
+<em>Python is a modern, interactive, object oriented programming language. Its clear 
 syntax and extensive libraries make it a great choice for beginners that 
 want to learn to write code without having to write absolutely everything 
-on their own.
+on their own.</em>
 
 # Project Listing
-Project 1: Dice Rolling Game
-
-Project 2: Mad Libs Generator
-
-Project 3: Hangman
+<ol>
+<li>Project 1: Dice Rolling Game</li>
+<li>Project 2: Mad Libs Generator</li>
+<li>Project 3: Hangman</li>
+</ol>
+---
 
 
 # Project 1: Dice Rolling Program
@@ -153,3 +154,5 @@ num_rolled)
 
 In your command line, go ahead and run the program. If you need help, see: [http://learnpythonthehardway.org/book/ex1.html](http://learnpythonthehardway.org/book/ex1.html)
 
+---
+# Lesson 2: 
