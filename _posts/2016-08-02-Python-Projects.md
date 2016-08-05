@@ -3,7 +3,8 @@ layout: post
 title: Python Projects
 ---
 
-Dinner and Code currently offers two programming paths: Python and web development. On this page are the Python projects.
+Dinner and Code currently offers two programming paths: Python and 
+javascript development. On this page are the Python projects.
 
 <em>Python is a modern, interactive, object oriented programming language. Its clear 
 syntax and extensive libraries make it a great choice for beginners that 
@@ -28,13 +29,11 @@ Difficulty Level: Beginner
 Language: Python
 
 ## Concepts Learned:
-<ul>
-<li>Using a text editor and console</li>
-<li>Importing a module</li>
-<li>Creating a WHILE loop</li>
-<li>Working with Integers</li>
-<li>Print</li>
-</ul>
+* Using a text editor and console
+* Importing a module
+* Creating a WHILE loop
+* Working with Integers
+* Print
 
 ## Description:
 This basic dice rolling program will let you get comfortable with coding in Python. The
@@ -55,20 +54,15 @@ has) and print it out on the screen.
 [Python Download Page](http://python.org/download)
 
 ### Learning Resources for this Lesson:
-<ul>
-<li>How to Use the Random Module in
-Python[http://www.pythonforbeginners.com/random/how-to-use-the-random-module-in-python](http://www.pythonforbeginners.com/random/how-to-use-the-random-module-in-python)</li>
-<li>Choose Your on PyVenture: The Random
-Module [The Random Module](https://en.wikibooks.org/wiki/Choose_Your_Own_Pyventure/Random_and_PRNGs)</li>
-<li>Learn Python the Hard Way (Python
-2.7) [Learn Python the Hard Way](http://learnpythonthehardway.org/)</li>
-<li>Zed Shaw’s Command Line Crash Course [Zed Shaw's Command Line Crash Course](http://learnpythonthehardway.org/book/appendixa.html)</li>
-<li>Python 2.7 Docs [https://docs.python.org/2.7/](https://docs.python.org/2.7/)</li>
-</ul>
+* How to Use the Random Module in Python [http://www.pythonforbeginners.com/random/how-to-use-the-random-module-in-python](http://www.pythonforbeginners.com/random/how-to-use-the-random-module-in-python)</li>
+* Choose Your on PyVenture: The Random Module [The Random Module](https://en.wikibooks.org/wiki/Choose_Your_Own_Pyventure/Random_and_PRNGs)</li>
+* Learn Python the Hard Way (Python 2.7) [Learn Python the Hard Way](http://learnpythonthehardway.org/)</li>
+* Zed Shaw’s Command Line Crash Course [Zed Shaw's Command Line Crash Course](http://learnpythonthehardway.org/book/appendixa.html)</li>
+* Python 2.7 Docs [https://docs.python.org/2.7/](https://docs.python.org/2.7/)</li>
+
 
 ### The How-To Video for this Project
 [YouTube](https://youtu.be/48n9NnK4k-M)
-
 
 ## The Steps
 
@@ -79,8 +73,7 @@ text editor + OS combination.
 
 See: [Learn Python the Hard Way Lesson](http://learnpythonthehardway.org/book/ex0.html)
 
-You’ll then need to install Python 2.7:
-[Python.org Download](http://python.org/download)
+You’ll then need to install Python 2.7: [Python.org Download](http://python.org/download)
 
 ### Step 2: Create a file in your Text editor
 
@@ -91,65 +84,41 @@ line. Make sure you save it in the right place so Python can call it up.
 
 This program has several components you must include:
 
-<ul>
-<li>Call the Random Module</li>
-<li>Define a function to Roll the dice</li>
-<li>Define a main() function of the program</li>
-<li>Print the results</li>
-</ul>
+* Call the Random Module
+* Define a function to Roll the dice
+* Define a main() function of the program
+* We should be good to go on Monday with that outline and agendaPrint the results
 
 ### Code Example:
 
-```
-import
-random
+~~~ python
+import random
 
- 
-
-def
-roll(sides=6): 
-
-    num_rolled = random.randint(1,sides)
-
-    return num_rolled
-
- 
+def roll(sides=6):
+    num_rolled = random.randint(1, sides)
+    return num_rolled
 
 def main():
+    sides = 6
+    rolling = True
+    while rolling:
+        roll_again = raw_input("Ready to roll? ENTER=Roll. Q=Quit. ")
+        if roll_again.lower() != "q":
+            num_rolled = roll(sides)
 
-    sides = 6
+        print("You rolled a {}".format(num_rolled))
+    else:
+        rolling = False
 
-    rolling = True
+    print("Thanks for playing.")
 
-    while rolling:
-
-        roll_again = input("Ready to roll?
-ENTER=Roll. Q=Quit. ")
-
-        if roll_again.lower() != "q":
-
-        num_rolled = roll(sides)
-
-        print("You rolled a",
-num_rolled)
-
-    else:
-
-        rolled = False
-
-        
-
-    print("Thanks for playing.")
-
-    
-
-    main()
-
-```
+main()
+~~~
 
 ### Step 4: Run the program
 
-In your command line, go ahead and run the program. If you need help, see: [http://learnpythonthehardway.org/book/ex1.html](http://learnpythonthehardway.org/book/ex1.html)
+In your command line, go ahead and run the program. If you need help, see: 
+[http://learnpythonthehardway.org/book/ex1.html](http://learnpythonthehardway.org/book/ex1.html)
 
 ---
 
@@ -160,17 +129,15 @@ Difficulty Level: Beginner
 Language: Python (v3)
 
 ## Concepts Learned:
-<ul>
-<li>Using a text editor and console</li>
-<li>Importing a module</li>
-<li>Creating a WHILE loop</li>
-<li>Working with Integers</li>
-<li>Print</li>
-</ul>
+* Using a text editor and console
+* Importing a module
+* Creating a WHILE loop
+* Working with Integers
+* Print
 
 ## Description:
-This basic dice rolling program will let you get comfortable with coding in Python. The program will randomly select a number (based on the number of “sides” your die has) and print it out on the screen. 
-
+The mad libs generator will take a few inputs from the user and then
+generate a funny story! Try it out and have some fun
 
 ## Learning Resources:
 <em>See lesson 1's resources</em>
@@ -179,17 +146,15 @@ This basic dice rolling program will let you get comfortable with coding in Pyth
 
 ### Step 3: Start writing some code
 This project is creative, so much of the code is up to you! The components required to make it work include:
-<ul>
-<li>Print function</li>
-<li>Main function</li>	
-<li>Variables</li>	
-<li>Strings</li>
-</ul>
+* Print function
+* Main function
+* Variables
+* Strings
 
 #### Code Example:
 See: http://anh.cs.luc.edu/python/hands-on/3.1/handsonHtml/madlib2.html
 
-```
+~~~ python
 print("Welcome to Mad Libs - Python Edition. Follow the prompts to create your own hilarious story.")
 
 proper_name1 = raw_input("Enter a name: ")
@@ -211,7 +176,7 @@ print("Dear {}, It is my pleasure to {} to you today. I am {} and I'm the "
       " give you {} percent of my inheritance. Yours truly, {}".format(
           proper_name1, verb1, proper_name2, noun1, place1, num1, noun2, 
           place2, noun3, num2, noun4, percent1, proper_name2))
-```
+~~~
 
 ## Step 4: Run the program
 In your command line, go ahead and run the program. If you need help, see: http://learnpythonthehardway.org/book/ex1.html
@@ -225,20 +190,18 @@ Difficulty Level: Intermediate
 Language: Python (v3)
 
 ## Concepts Learned:
-<ul>
-<li>Using a text editor and console</li>
-<li>Importing a module</li>
-<li>Creating a WHILE loop</li>
-<li>Working with Integers</li>
-<li>Print</li>
-<li>Random</li>
-<li>Variables</li>
-<li>Boolean</li>
-<li>Input/Output</li>
-<li>Char</li>
-<li>Strings</li>
-<li>Length</li>
-</ul>
+* Using a text editor and console
+* Importing a module
+* Creating a WHILE loop
+* Working with Integers
+* Print
+* Random
+* Variables
+* Boolean
+* Input/Output
+* Char
+* Strings
+* Length
 
 ## Description:
 
@@ -251,30 +214,29 @@ The main goal here is to create a “guess the word” game. The user needs to b
 
 ### Step 3: Start writing some code
 This project is creative, so much of the code is up to you! The components required to make it work include:
-•	Print function
-•	Main function
-•	Print
-•	Random
-•	Variables
-•	Boolean
-•	Input/Output
-•	Char
-•	Strings
-•	Length
+* Print function
+* Main function
+* Print
+* Random
+* Variables
+* Boolean
+* Input/Output
+* Char
+* Strings
+* Length
 
 #### Code Example:
 <em>Here’s one with a timer from http://www.pythonforbeginners.com/code-snippets-source-code/game-hangman:</em>
-```
+~~~ python
 #importing the time module
 import time
 
 #welcoming the user
 name = raw_input("What is your name? ")
 
-print "Hello, " + name, "Time to play hangman!"
+print("Hello, " + name + " Time to play hangman!")
 
-print "
-"
+print("")
 
 #wait for 1 second
 time.sleep(1)
@@ -294,70 +256,57 @@ turns = 10
 # Create a while loop
 
 #check if the turns are more than zero
-while turns > 0:         
-
+while turns > 0:
     # make a counter that starts with zero
-    failed = 0             
+    failed = 0
 
-    # for every character in secret_word    
-    for char in word:      
-
-    # see if the character is in the players guess
-        if char in guesses:    
-    
-        # print then out the character
-            print char,    
-
+    # for every character in secret_word
+    for char in word:
+        # see if the character is in the players guess
+        if char in guesses:
+            # print then out the character
+            print(char)
         else:
-    
-        # if not found, print a dash
-            print "_",     
-       
-        # and increase the failed counter with one
-            failed += 1    
+            # if not found, print a dash
+            print("_")
+            # and increase the failed counter with one
+            failed += 1
 
     # if failed is equal to zero
-
     # print You Won
-    if failed == 0:        
-        print "
-You won"  
+    if failed == 0:
+        print "You won"
+        # exit the script
+        break
 
-    # exit the script
-        break              
-
-    print
+    print("")
 
     # ask the user go guess a character
-    guess = raw_input("guess a character:") 
+    guess = raw_input("guess a character:")
 
     # set the players guess to guesses
-    guesses += guess                    
+    guesses += guess
 
     # if the guess is not found in the secret word
-    if guess not in word:  
- 
-     # turns counter decreases with 1 (now 9)
-        turns -= 1        
- 
-    # print wrong
-        print "Wrong
-"    
- 
-    # how many turns are left
-        print "You have", + turns, 'more guesses' 
- 
-    # if the turns are equal to zero
-        if turns == 0:           
-    
-        # print "You Loose"
-            print "You Loose
-"
+    if guess not in word:
+        # turns counter decreases with 1 (now 9)
+        turns -= 1
 
+        # print wrong
+        print "Wrong"
 
-```
+        # how many turns are left
+        print "You have", + turns, 'more guesses'
+
+        # if the turns are equal to zero
+        if turns == 0:
+            # print "You Loose"
+            print "You Loose"
+
+~~~
 ### Step 4: Run the program
 
-In your command line, go ahead and run the program. If you need help, see: [Learn Python the Hard Way Lesson](http://learnpythonthehardway.org/book/ex1.html)
+In your command line, go ahead and run the program. If you need help, see: 
+[Learn Python the Hard Way Lesson](http://learnpythonthehardway.org/book/ex1.html)
 
 
