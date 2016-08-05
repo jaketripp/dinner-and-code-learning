@@ -227,6 +227,7 @@ This project is creative, so much of the code is up to you! The components requi
 
 #### Code Example:
 <em>Here’s one with a timer from http://www.pythonforbeginners.com/code-snippets-source-code/game-hangman:</em>
+
 ~~~ python
 #importing the time module
 import time
@@ -304,6 +305,7 @@ while turns > 0:
             print "You Loose"
 
 ~~~
+
 ### Step 4: Run the program
 
 In your command line, go ahead and run the program. If you need help, see: 
