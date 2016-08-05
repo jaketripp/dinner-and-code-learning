@@ -226,7 +226,7 @@ This project is creative, so much of the code is up to you! The components requi
 * Length
 
 #### Code Example:
-<em>Here’s one with a timer from http://www.pythonforbeginners.com/code-snippets-source-code/game-hangman:</em>
+Here’s one with a timer from http://www.pythonforbeginners.com/code-snippets-source-code/game-hangman:
 
 ~~~ python
 #importing the time module
