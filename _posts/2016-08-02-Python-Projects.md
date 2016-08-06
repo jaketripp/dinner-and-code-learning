@@ -3,15 +3,15 @@ layout: post
 title: Python Projects
 ---
 
-Dinner and Code currently offers two programming paths: Python and 
+Dinner and Code currently offers two programming paths: Python and
 javascript development. On this page are the Python projects.
 
-<em>Python is a modern, interactive, object oriented programming language. Its clear 
-syntax and extensive libraries make it a great choice for beginners that 
-want to learn to write code without having to write absolutely everything 
+<em>Python is a modern, interactive, object oriented programming language. Its clear
+syntax and extensive libraries make it a great choice for beginners that
+want to learn to write code without having to write absolutely everything
 on their own.</em>
 
-# Project Listing 
+# Project Listing
 <ol>
 <li>Project 1: Dice Rolling Game</li>
 <li>Project 2: Mad Libs Generator</li>
@@ -38,7 +38,7 @@ Language: Python
 ## Description:
 This basic dice rolling program will let you get comfortable with coding in Python. The
 program will randomly select a number (based on the number of “sides” your die
-has) and print it out on the screen. 
+has) and print it out on the screen.
 
 ## What you’ll need:
 
@@ -46,9 +46,9 @@ has) and print it out on the screen.
 
 1. NotePad++ ([https://notepad-plus-plus.org](https://notepad-plus-plus.org/))
 
-2. Brackets ([http://brackets.io/](http://brackets.io/)) 
+2. Brackets ([http://brackets.io/](http://brackets.io/))
 
-3. TextWrangler ([http://www.barebones.com/products/textwrangler/](http://www.barebones.com/products/textwrangler/)) 
+3. TextWrangler ([http://www.barebones.com/products/textwrangler/](http://www.barebones.com/products/textwrangler/))
 
 ### Python Download:
 [Python Download Page](http://python.org/download)
@@ -69,7 +69,7 @@ has) and print it out on the screen.
 ### Step 1: Get Set Up
 You’ll need to install a text editor and configure it for your particular machine. Since
 the steps vary, it’s best to do some Google Fu as it relates to your particular
-text editor + OS combination. 
+text editor + OS combination.
 
 See: [Learn Python the Hard Way Lesson](http://learnpythonthehardway.org/book/ex0.html)
 
@@ -92,6 +92,7 @@ This program has several components you must include:
 ### Code Example:
 
 ~~~ python
+from six.moves import input
 import random
 
 def roll(sides=6):
@@ -102,7 +103,7 @@ def main():
     sides = 6
     rolling = True
     while rolling:
-        roll_again = raw_input("Ready to roll? ENTER=Roll. Q=Quit. ")
+        roll_again = input("Ready to roll? ENTER=Roll. Q=Quit. ")
         if roll_again.lower() != "q":
             num_rolled = roll(sides)
 
@@ -117,7 +118,7 @@ main()
 
 ### Step 4: Run the program
 
-In your command line, go ahead and run the program. If you need help, see: 
+In your command line, go ahead and run the program. If you need help, see:
 [http://learnpythonthehardway.org/book/ex1.html](http://learnpythonthehardway.org/book/ex1.html)
 
 ---
@@ -155,26 +156,27 @@ This project is creative, so much of the code is up to you! The components requi
 See: http://anh.cs.luc.edu/python/hands-on/3.1/handsonHtml/madlib2.html
 
 ~~~ python
+from six.moves import input
 print("Welcome to Mad Libs - Python Edition. Follow the prompts to create your own hilarious story.")
 
-proper_name1 = raw_input("Enter a name: ")
-proper_name2 = raw_input("Enter another name: ")
-noun1 = raw_input("Enter a proper title: ")
-place1 = raw_input("Enter a place: ")
-place2 = raw_input("Enter another place: ")
-verb1 = raw_input("Enter a present-tense verb: ")
-noun3 = raw_input("Enter a noun: ")
-noun2 = raw_input("Enter a plural noun: ")
-noun4 = raw_input("Enter another plural noun: ")
-num2 = raw_input("Enter a number: ")
-num1 = raw_input("Enter another number: ")
-percent1 = raw_input("Enter another number: ")
+proper_name1 = input("Enter a name: ")
+proper_name2 = input("Enter another name: ")
+noun1 = input("Enter a proper title: ")
+place1 = input("Enter a place: ")
+place2 = input("Enter another place: ")
+verb1 = input("Enter a present-tense verb: ")
+noun3 = input("Enter a noun: ")
+noun2 = input("Enter a plural noun: ")
+noun4 = input("Enter another plural noun: ")
+num2 = input("Enter a number: ")
+num1 = input("Enter another number: ")
+percent1 = input("Enter another number: ")
 
 print("Dear {}, It is my pleasure to {} to you today. I am {} and I'm the "
      "{} of {}. I have inherited {} {} but I need your help to get it to {}."
      "Please send me your {} and the sum of {} {} to get started, and I will"
       " give you {} percent of my inheritance. Yours truly, {}".format(
-          proper_name1, verb1, proper_name2, noun1, place1, num1, noun2, 
+          proper_name1, verb1, proper_name2, noun1, place1, num1, noun2,
           place2, noun3, num2, noun4, percent1, proper_name2))
 ~~~
 
@@ -229,11 +231,12 @@ This project is creative, so much of the code is up to you! The components requi
 Here’s one with a timer from http://www.pythonforbeginners.com/code-snippets-source-code/game-hangman:
 
 ~~~ python
+from six.moves import input
 #importing the time module
 import time
 
 #welcoming the user
-name = raw_input("What is your name? ")
+name = input("What is your name? ")
 
 print("Hello, " + name + " Time to play hangman!")
 
@@ -283,7 +286,7 @@ while turns > 0:
     print("")
 
     # ask the user go guess a character
-    guess = raw_input("guess a character:")
+    guess = input("guess a character:")
 
     # set the players guess to guesses
     guesses += guess
@@ -308,7 +311,5 @@ while turns > 0:
 
 ### Step 4: Run the program
 
-In your command line, go ahead and run the program. If you need help, see: 
+In your command line, go ahead and run the program. If you need help, see:
 [Learn Python the Hard Way Lesson](http://learnpythonthehardway.org/book/ex1.html)
-
-
