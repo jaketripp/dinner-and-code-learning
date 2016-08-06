@@ -107,9 +107,9 @@ def main():
         if roll_again.lower() != "q":
             num_rolled = roll(sides)
 
-        print("You rolled a {}".format(num_rolled))
-    else:
-        rolling = False
+            print("You rolled a {}".format(num_rolled))
+        else:
+            rolling = False
 
     print("Thanks for playing.")
 
