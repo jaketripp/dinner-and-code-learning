@@ -16,6 +16,7 @@ on their own.</em>
 <li>Project 1: Dice Rolling Game</li>
 <li>Project 2: Mad Libs Generator</li>
 <li>Project 3: Hangman</li>
+<li>Project 4: Nibbles</li>
 </ol>
 
 <em>All of the projects are listed on this page. Keep scrolling to see more.</em>
@@ -209,7 +210,6 @@ Language: Python (v3)
 
 The main goal here is to create a “guess the word” game. The user needs to be able to input letter guesses (strings). A limit should also be set on how many guesses they can use. This means you’ll need a way to grab a word to use for guessing. (This can be grabbed from a pre-made list. No need to get too fancy.) You will also need functions to check if the user has actually inputted a single letter, to check if the inputted letter is in the hidden word (and if it is, how many times it appears), to print letters, and a counter variable to limit guesses.
 
-
 ## Learning Resources:
 
 [How-To Video for this Project](https://youtu.be/5aAkDVXxNhk)
@@ -313,3 +313,154 @@ while turns > 0:
 
 In your command line, go ahead and run the program. If you need help, see:
 [Learn Python the Hard Way Lesson](http://learnpythonthehardway.org/book/ex1.html)
+
+# Project 4: Nibbles
+
+Difficulty Level: Intermediate
+
+Language: Python 3 with Tkinter
+
+## Concepts Learned:
+* Importing modules
+* Using Tkinter, the defacto GUI library for Python
+* Basic multi-threading and concurrency
+* Sprite generation
+* Arrays and Dictionaries
+* Object-oriented design
+
+## Description
+This project servers to intruduce you to the queue module in Python as used in conjunction with the threading module and basic introduction to concurrency and multi-threaded software. The game could have been implemented without threads and queues, but it would have been slower, longer, and a lot more complex. By using queues to manage data from multiple threads effectively, we have been able to contain the program to under 150 lines of code.
+
+#### Code Example:
+~~~ python
+import Queue
+from random import randrange
+from threading import Thread
+from time import sleep
+from Tkinter import Tk, Button, Canvas
+
+# colors used when drawing the game
+bg_color = '#6960EC'
+snake_color = '#E4ED61'
+food_color = '#E4ED61'
+text_color = 'white'
+
+
+class GUI(Tk):
+    def __init__(self, queue):
+        Tk.__init__(self)                                                   # GUI class inherits the Tk class
+        self.queue = queue
+        self.is_game_over = False
+        self.canvas = Canvas(self, width=495, height=305, bg=bg_color)      # initialize the draw canvas
+        self.canvas.pack()
+        self.snake = self.canvas.create_line((0, 0), (0, 0), fill=snake_color, width=10)        #initialize game objects
+        self.food = self.canvas.create_rectangle(0, 0, 0, 0, fill=food_color, outline=food_color)
+        self.points_earned = self.canvas.create_text(455, 15, fill=text_color, text='Score: 0')
+        self.queue_handler()                                                # call the queue handler which will act as
+                                                                            # our main loop, processing queued events
+    def queue_handler(self):
+        try:
+            while True:
+                task = self.queue.get(block=False)                          # get the next item in queue
+
+                # in this block of logic, we check the conditions of the game and apply any changes
+                if 'game_over' in task:
+                    self.game_over()
+                elif 'move' in task:
+                    points = [x for point in task['move'] for x in point]
+                    self.canvas.coords(self.snake, *points)
+                elif 'food' in task:
+                    self.canvas.coords(self.food, *task['food'])
+                elif 'points_earned' in task:
+                    self.canvas.itemconfigure(self.points_earned, text='Score: {}'.format(task['points_earned']))
+                self.queue.task_done()
+        except Queue.Empty:
+            if not self.is_game_over:
+                self.canvas.after(100, self.queue_handler)
+
+    def game_over(self):
+        self.is_game_over = True
+        self.canvas.create_text(200, 150, fill=text_color, text='Game Over')
+        quitbtn = Button(self, text='Quit', command=self.destroy)
+        self.canvas.create_window(200, 180, anchor='nw', window=quitbtn)
+
+
+class Food:                                             # Because we want to process all data centrally from within a
+    def __init__(self, queue):                          # queue, we pass the queue as an argument to the Food class.
+        self.queue = queue                              # This demonstrates how code executed in the main thread can
+        self.generate_food()                            # communicate with attributes and methods from other threads!
+
+    def generate_food(self):                            # generate_food generates a random position on the canvas.
+        x = randrange(5, 480, 10)
+        y = randrange(5, 295, 10)
+        self.position = x, y                            # However, because this point is just a small point on the
+        self.exppos = x - 5, y - 5, x + 5, y + 5        # canvas, it would be barely visible. Therefore, we generate
+        self.queue.put({'food': self.exppos})           # an expanded coordinate range within five values lower and
+                                                        # higher than the original coordinates. This is easily visible.
+
+
+class Snake(Thread):                                    # To demonstrate multi-threading, we implement our Snake class
+    def __init__(self, gui, queue):                     # to work from a separate thread.
+        Thread.__init__(self)
+        self.gui = gui
+        self.queue = queue
+        self.daemon = True
+        self.points_earned = 0                          # Initialize the score points to zero.
+        self.snake_points = [(495, 55), (485, 55), (475, 55), (465, 55), (455, 55)] # The initial position of our Snake
+        self.food = Food(queue)
+        self.direction = 'Left'                         # Set our Snake's initial direction to left.
+        self.start()                                    # Start our new Worker Thread
+
+    def run(self):                                      # This method overrides the Thread's run() method and was set
+        while not self.gui.is_game_over:                # in motion when we called start() in Snake. It begins an
+            self.queue.put({'move': self.snake_points}) # infinite loop to call the move() method at small intervals.
+            sleep(0.1)                                  # During every loop cycle, the method populates the queue with
+            self.move()                                 # a 'move' value equal to our Snake's updated position.
+
+    def move(self):
+        new_snake_point = self.calculate_new_coordinates() # move() obtains the latest coordinates of the snake
+        if self.food.position == new_snake_point:          # check if the new snake point is the same as Food's position
+            self.points_earned += 1                        # if so, increment the score and add an item to queue to
+            self.queue.put({'points_earned': self.points_earned})  #update the GUI on the main thread.
+            self.food.generate_food()                      # Generate a new Food object.
+        else:
+            self.snake_points.pop(0)                       # If not, pop() removes the last the last item from the snake
+        self.check_game_over(new_snake_point)              # coordinates.
+        self.snake_points.append(new_snake_point)
+
+    def key_pressed(self, e):
+        self.direction = e.keysym
+
+    def calculate_new_coordinates(self):
+        last_x, last_y = self.snake_points[-1]
+        if self.direction == 'Up':
+            new_snake_point = last_x, (last_y - 10)
+        elif self.direction == 'Down':
+            new_snake_point = last_x, (last_y + 10)
+        elif self.direction == 'Left':
+            new_snake_point = (last_x - 10), last_y
+        elif self.direction == 'Right':
+            new_snake_point = (last_x + 10), last_y
+        return new_snake_point
+
+    def check_game_over(self, snake_point):
+        x, y = snake_point[0], snake_point[1]
+        if not -5 < x < 505 or not -5 < y < 315 or snake_point in self.snake_points:
+            self.queue.put({'game_over': True})
+
+
+def main():
+    queue = Queue.Queue()
+    gui = GUI(queue)
+    snake = Snake(gui, queue)
+    gui.bind('<Key-Left>', snake.key_pressed)
+    gui.bind('<Key-Right>', snake.key_pressed)
+    gui.bind('<Key-Up>', snake.key_pressed)
+    gui.bind('<Key-Down>', snake.key_pressed)
+    gui.mainloop()
+
+
+if __name__ == '__main__':
+    main()
+
+~~~
