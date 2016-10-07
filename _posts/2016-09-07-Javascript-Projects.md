@@ -11,9 +11,7 @@ javascript development. On this page are the Javascript projects.
 # Project Listing
 <ol>
 <li>Project 1: Dice Rolling Game</li>
-<li>Project 2: Mad Libs Generator</li>
-<li>Project 3: Hangman</li>
-<li>Project 4: Nibbles</li>
+<li>Project 2: Tip Calculator</li>
 </ol>
 
 <em>All of the projects are listed on this page. Keep scrolling to see more.</em>
