@@ -23,16 +23,16 @@ on a computer.
 Almost all programming languages share a few common features:
 
 - They provide a way to store the value of an intermediate calculation. 
-These storage locations are called **variables**.
+  These storage locations are called **variables**.
 - They provide a way to encapsulate blocks of code into reusable pieces. 
-The most primitive of these is normally in the form of a **function**.
+  The most primitive of these is normally in the form of a **function**.
 - They provide a way to run a block of code N times. This functionality 
-is provided either as a loop construct or a way for a function to call 
-itself the requisite number of times (this is called recursion). We’ll 
-cover **for and while loops**.
+  is provided either as a loop construct or a way for a function to call 
+  itself the requisite number of times (this is called recursion). We’ll 
+  cover **for and while loops**.
 - Further, most programming languages provide a way to evaluate the 
-conditions under which a block of code is run. This is called a 
-conditional construct. 
+  conditions under which a block of code is run. This is called a 
+  conditional construct. 
 
 Understanding these basic similarities is essential to writing any 
 computer program. For the remainder of this document, we’ll provide some 
@@ -196,7 +196,7 @@ the + sign. See below:
 
 
     function print(message) {
-	    var output = document.getElementById('output');
+        var output = document.getElementById('output');
         output.innerHTML = output.innerHTML + "<br>" + message;
     }
     
@@ -221,7 +221,7 @@ We can also store the result of adding the numbers together in another
 variable c. Type the following into jsfiddle:
 
     function print(message) {
-	    var output = document.getElementById('output');
+        var output = document.getElementById('output');
         output.innerHTML = output.innerHTML + "<br>" + message;
     }
     
@@ -240,7 +240,7 @@ like the image below:
 ![_config.yml]({{ site.baseurl }}/images/jsfiddle4.png)
 
 As you can see, the output on the right is now
-    
+​    
     5
     11
     11
@@ -476,8 +476,8 @@ appear:
     >>> while number < 5:
             number = number + 1
             print(number)
-    
-        
+
+
     1
     2
     3
@@ -535,8 +535,8 @@ Below is an easier way to do what we did above:
     >>> while number < 5:
     	number = number + 1
     	print(number)
-    
-    	
+
+
     1
     2
     3
@@ -544,15 +544,15 @@ Below is an easier way to do what we did above:
     5
     >>> for number in range(1, 6):
     	print(number)
-    
-    	
+
+
     1
     2
     3
     4
     5
     >>> 
-    
+
 Note that the two loops have the exact same output, but the bottom one
 is less code. The _range_ function returns numbers between the two 
 parameters given, up to but not including the second number.
@@ -695,7 +695,22 @@ False
 True
 ~~~
 
+In Javascript:
+
+~~~ javascript
+function print(message) {
+    var output = document.getElementById('output');
+    output.innerHTML = output.innerHTML + "<br>" + message;
+}
+
+print(3 == (1+2));
+primn(3 == 4);
+~~~
+
+
+
 ## Conditional execution
+
 In order to code useful and interesting programs, we almost always need the
 ability to evaluate conditions and change the program behavior accordingly.
 The simplest form is the if statement:
@@ -709,6 +724,24 @@ else:
     print("Did you know that multiplying two odd numbers always yields " +
         "an odd result?")
 ~~~
+
+In Javascript:
+
+~~~ javascript
+function print(message) {
+    var output = document.getElementById('output');
+    output.innerHTML = output.innerHTML + "<br>" + message;
+}
+
+var time = new Date().getHours();
+if (time < 20) {
+  print("Good day")
+} else {
+  print("Good evening")
+}
+~~~
+
+
 
 The boolean expression after an if statement is called a condition. If true, 
 then all indented statements get executed. If false, then all the statements
@@ -730,3 +763,22 @@ else:
     print("If ", x, " is neither greater nor lesser than ", y,
        " it must be equal to it.")
 ~~~
+
+In Javascript, we can expand on the last example:
+
+~~~ javascript
+function print(message) {
+    var output = document.getElementById('output');
+    output.innerHTML = output.innerHTML + "<br>" + message;
+}
+
+var time = new Date().getHours();
+if (time < 10) {
+  print("Good morning")
+} else if (time < 20) {
+  print("Good day")
+} else {
+  print("Good evening")
+}
+~~~
+
