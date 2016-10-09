@@ -331,6 +331,9 @@ Language: Python 3 with Tkinter
 ## Description
 This project servers to intruduce you to the queue module in Python as used in conjunction with the threading module and basic introduction to concurrency and multi-threaded software. The game could have been implemented without threads and queues, but it would have been slower, longer, and a lot more complex. By using queues to manage data from multiple threads effectively, we have been able to contain the program to under 150 lines of code.
 
+####
+This project requires [Tkinter](http://tkinter.unpythonic.net/wiki/). This may have come with your python installation, if not, instructions for installing Tkinter can be found [here](http://tkinter.unpythonic.net/wiki/How_to_install_Tkinter).
+
 #### Code Example:
 ~~~ python
 import Queue
