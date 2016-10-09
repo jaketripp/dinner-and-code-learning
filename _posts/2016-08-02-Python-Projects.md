@@ -336,7 +336,7 @@ This project requires [Tkinter](http://tkinter.unpythonic.net/wiki/). This may h
 
 #### Code Example:
 ~~~ python
-import Queue
+from queue import Queue, Empty
 from random import randrange
 from threading import Thread
 from time import sleep
@@ -377,7 +377,7 @@ class GUI(Tk):
                 elif 'points_earned' in task:
                     self.canvas.itemconfigure(self.points_earned, text='Score: {}'.format(task['points_earned']))
                 self.queue.task_done()
-        except Queue.Empty:
+        except Empty:
             if not self.is_game_over:
                 self.canvas.after(100, self.queue_handler)
 
@@ -453,7 +453,7 @@ class Snake(Thread):                                    # To demonstrate multi-t
 
 
 def main():
-    queue = Queue.Queue()
+    queue = Queue()
     gui = GUI(queue)
     snake = Snake(gui, queue)
     gui.bind('<Key-Left>', snake.key_pressed)
