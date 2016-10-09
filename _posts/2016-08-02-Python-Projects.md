@@ -157,7 +157,7 @@ This project is creative, so much of the code is up to you! The components requi
 See: http://anh.cs.luc.edu/python/hands-on/3.1/handsonHtml/madlib2.html
 
 ~~~ python
-from six.moves import input
+from builtins import input
 print("Welcome to Mad Libs - Python Edition. Follow the prompts to create your own hilarious story.")
 
 proper_name1 = input("Enter a name: ")
@@ -231,7 +231,7 @@ This project is creative, so much of the code is up to you! The components requi
 Here’s one with a timer from http://www.pythonforbeginners.com/code-snippets-source-code/game-hangman:
 
 ~~~ python
-from six.moves import input
+from builtins import input
 #importing the time module
 import time
 
