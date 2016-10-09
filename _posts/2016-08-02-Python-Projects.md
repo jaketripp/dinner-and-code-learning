@@ -93,7 +93,7 @@ This program has several components you must include:
 ### Code Example:
 
 ~~~ python
-from six.moves import input
+from builtins import input
 import random
 
 def roll(sides=6):
