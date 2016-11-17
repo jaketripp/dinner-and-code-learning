@@ -174,9 +174,9 @@ num1 = input("Enter another number: ")
 percent1 = input("Enter another number: ")
 
 print("Dear {}, It is my pleasure to {} to you today. I am {} and I'm the "
-     "{} of {}. I have inherited {} {} but I need your help to get it to {}."
-     "Please send me your {} and the sum of {} {} to get started, and I will"
-      " give you {} percent of my inheritance. Yours truly, {}".format(
+     "{} of {}. I have inherited {} {} but I need your help to get it to {}. "
+     "Please send me your {} and the sum of {} {} to get started, and I will "
+      "give you {} percent of my inheritance. Yours truly, {}".format(
           proper_name1, verb1, proper_name2, noun1, place1, num1, noun2,
           place2, noun3, num2, noun4, percent1, proper_name2))
 ~~~
@@ -232,7 +232,6 @@ Here’s one with a timer from http://www.pythonforbeginners.com/code-snippets-s
 
 ~~~ python
 from builtins import input
-#importing the time module
 import time
 
 #welcoming the user
@@ -245,7 +244,7 @@ print("")
 #wait for 1 second
 time.sleep(1)
 
-print "Start guessing..."
+print("Start guessing...")
 time.sleep(0.5)
 
 #here we set the secret
@@ -279,8 +278,8 @@ while turns > 0:
     # if failed is equal to zero
     # print You Won
     if failed == 0:
-        print "You won"
-        # exit the script
+        print("You Win")
+        # exit the loop, effectively ending the script
         break
 
     print("")
@@ -297,16 +296,15 @@ while turns > 0:
         turns -= 1
 
         # print wrong
-        print "Wrong"
+        print("Wrong")
 
         # how many turns are left
-        print "You have", + turns, 'more guesses'
+        print("You have", + turns, 'more guesses')
 
         # if the turns are equal to zero
         if turns == 0:
-            # print "You Loose"
-            print "You Loose"
-
+            # print "You Lose"
+            print("You Lose")
 ~~~
 
 ### Step 4: Run the program
@@ -340,7 +338,11 @@ from queue import Queue, Empty
 from random import randrange
 from threading import Thread
 from time import sleep
-from Tkinter import Tk, Button, Canvas
+
+# The module differs between Python 2 and 3
+#from Tkinter import Tk, Button, Canvas # Uncomment for Python 2
+from tkinter import Tk, Button, Canvas # Uncomment for Python 3
+
 
 # colors used when drawing the game
 bg_color = '#6960EC'
@@ -465,5 +467,4 @@ def main():
 
 if __name__ == '__main__':
     main()
-
 ~~~
