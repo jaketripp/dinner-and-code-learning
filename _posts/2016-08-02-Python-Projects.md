@@ -157,8 +157,13 @@ This project is creative, so much of the code is up to you! The components requi
 See: http://anh.cs.luc.edu/python/hands-on/3.1/handsonHtml/madlib2.html
 
 ~~~ python
+    # python 2: delete 'from builtins import input'
 from builtins import input
+
 print("Welcome to Mad Libs - Python Edition. Follow the prompts to create your own hilarious story.")
+
+    # python 2: use raw_input('') instead of input('')
+	# proper_name1 = raw_input("Enter a name: ")
 
 proper_name1 = input("Enter a name: ")
 proper_name2 = input("Enter another name: ")
@@ -173,12 +178,14 @@ num2 = input("Enter a number: ")
 num1 = input("Enter another number: ")
 percent1 = input("Enter another number: ")
 
-print("Dear {}, It is my pleasure to {} to you today. I am {} and I'm the "
+    # \n inside of a string means new line
+
+print("\nDear {}, \n\nIt is my pleasure to {} to you today. I am {} and I'm the "
      "{} of {}. I have inherited {} {} but I need your help to get it to {}. "
      "Please send me your {} and the sum of {} {} to get started, and I will "
-      "give you {} percent of my inheritance. Yours truly, {}".format(
-          proper_name1, verb1, proper_name2, noun1, place1, num1, noun2,
-          place2, noun3, num2, noun4, percent1, proper_name2))
+      "give you {} percent of my inheritance. \n\nYours truly, \n{}"
+      .format(proper_name1, verb1, proper_name2, noun1, place1, num1, noun2,
+        place2, noun3, num2, noun4, percent1, proper_name2))
 ~~~
 
 ## Step 4: Run the program
