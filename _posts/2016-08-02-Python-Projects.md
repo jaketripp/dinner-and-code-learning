@@ -93,6 +93,11 @@ This program has several components you must include:
 ### Code Example:
 
 ~~~ python
+# python 2: delete 'from builtins import input'
+
+# python 2: use raw_input('') instead of input('')
+# e.g. roll_again = raw_input("Ready to roll? ENTER=Roll. Q=Quit. ")
+
 from builtins import input
 import random
 
