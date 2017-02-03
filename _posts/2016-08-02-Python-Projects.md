@@ -162,12 +162,12 @@ This project is creative, so much of the code is up to you! The components requi
 See: http://anh.cs.luc.edu/python/hands-on/3.1/handsonHtml/madlib2.html
 
 ~~~ python
-    # python 2: delete 'from builtins import input'
+# python 2: remove 'from builtins import input'
 from builtins import input
 
 print("Welcome to Mad Libs - Python Edition. Follow the prompts to create your own hilarious story.")
 
-    # python 2: use raw_input('') instead of input('')
+# python 2: use raw_input('') instead of input('')
 	# proper_name1 = raw_input("Enter a name: ")
 
 proper_name1 = input("Enter a name: ")
@@ -183,7 +183,7 @@ num2 = input("Enter a number: ")
 num1 = input("Enter another number: ")
 percent1 = input("Enter another number: ")
 
-    # \n inside of a string means new line
+# \n inside of a string means new line
 
 print("\nDear {}, \n\nIt is my pleasure to {} to you today. I am {} and I'm the "
      "{} of {}. I have inherited {} {} but I need your help to get it to {}. "
